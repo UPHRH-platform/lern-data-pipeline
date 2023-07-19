@@ -250,7 +250,7 @@ class CertificateGeneratorFunction(config: CertificateGeneratorConfig, httpUtil:
         val httpResponse = httpUtil.post(searchUri, req)
         logger.info("RC Search API httpResponse: " + httpResponse)
         if(httpResponse.status == 200) {
-          val resp = ScalaJsonUtil.deserialize[List[Map[String, AnyRef]]](httpResponse.body)
+          //val resp = ScalaJsonUtil.deserialize[List[Map[String, AnyRef]]](httpResponse.body)
           //id = resp.head.getOrElse("osid", null).asInstanceOf[String]
           id=""
         }
